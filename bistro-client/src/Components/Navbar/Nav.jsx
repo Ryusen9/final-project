@@ -9,7 +9,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
-      <nav className="w-full flex items-center justify-center bg-base-100 z-50 p-2.5 fixed top-0 left-0">
+      <nav className="w-full flex items-center justify-center bg-base-100/80 z-50 p-2.5 fixed top-0 left-0">
         <div className="max-w-7xl w-full h-full flex items-center justify-between">
           {/* Logo */}
           <div className="flex text-center items-center justify-center flex-col">
@@ -62,6 +62,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
+      {/* Mobile Menu */}
       {menuOpen && (
         <aside>
           <div className="w-full min-h-screen fixed top-0 left-0 bg-black opacity-90 z-50">

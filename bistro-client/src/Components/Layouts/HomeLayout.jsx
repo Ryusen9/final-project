@@ -1,8 +1,14 @@
 import React from 'react'
+import Hero from '../Hero/Hero'
 
 const HomeLayout = () => {
   return (
-    <div>HomeLayout</div>
+    <>
+    <Hero/>
+    <div className='max-w-7xl mx-auto'>
+      <p>Rest of the section goes here....</p>
+    </div>
+    </>
   )
 }
 
