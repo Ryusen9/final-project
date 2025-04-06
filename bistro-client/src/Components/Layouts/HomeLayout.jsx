@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
 import CategorySlide from '../Category Slide/CategorySlide'
+import Extra1 from '../Extras/Extra1'
+import PopularMenu from '../Extras/PopularMenu'
 
 const HomeLayout = () => {
   return (
@@ -8,6 +10,8 @@ const HomeLayout = () => {
     <Hero/>
     <div className='max-w-7xl mx-auto'>
       <CategorySlide/>
+      <Extra1/>
+      <PopularMenu/>
       <p>Rest of the section goes here....</p>
     </div>
     </>

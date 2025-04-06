@@ -65,7 +65,7 @@ const CategorySlide = () => {
         <SwiperSlide>
           <div className="h-full relative bg-center bg-cover" style={{backgroundImage: `url(${sliderImage5})`}}>
             <p className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center font-Cinzel text-2xl uppercase w-full p-6 bg-base-200/75">
-              Salad
+              Desserts
             </p>
           </div>
         </SwiperSlide>
