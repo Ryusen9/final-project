@@ -5,6 +5,7 @@ import Extra1 from '../Extras/Extra1'
 import PopularMenu from '../Extras/PopularMenu'
 import Contact from '../Extras/Contact'
 import Featured from '../Featured/Featured'
+import Testimonials from '../Category Slide/Testimonials'
 
 const HomeLayout = () => {
   return (
@@ -16,6 +17,7 @@ const HomeLayout = () => {
       <PopularMenu/>
       <Contact/>
       <Featured/>
+      <Testimonials/>
       <p>Rest of the section goes here....</p>
     </div>
     </>

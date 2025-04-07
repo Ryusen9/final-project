@@ -27,7 +27,7 @@ const Nav = () => {
                 {navLinks.map((link, index) => {
                   return (
                     <li
-                      className="font-Inter cursor-pointer font-semibold text-sm"
+                      className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm"
                       key={index}
                     >
                       <Link>{link}</Link>

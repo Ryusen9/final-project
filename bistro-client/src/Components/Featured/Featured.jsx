@@ -4,7 +4,7 @@ import featuredImg from "../../../public/assets/home/featured.jpg";
 const Featured = () => {
   return (
     <div
-      className="relative flex flex-col items-center justify-center my-7 h-[65vh] bg-cover bg-center bg-no-repeat text-white"
+      className="relative flex flex-col items-center justify-center my-7 p-11 bg-cover bg-center bg-fixed bg-no-repeat text-white"
       style={{ backgroundImage: `url(${featuredImg})` }}
     >
       {/* Black overlay */}
@@ -24,7 +24,7 @@ const Featured = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center justify-center max-w-6xl px-4">
         {/* Image section */}
         <div
-          className="w-full h-96 bg-cover bg-center rounded-lg"
+          className="w-full h-36 lg:h-96 bg-cover bg-center rounded-lg"
           style={{ backgroundImage: `url(${featuredImg})` }}
         />
 
