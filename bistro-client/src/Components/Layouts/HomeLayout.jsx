@@ -6,10 +6,14 @@ import PopularMenu from '../Extras/PopularMenu'
 import Contact from '../Extras/Contact'
 import Featured from '../Featured/Featured'
 import Testimonials from '../Category Slide/Testimonials'
+import { Helmet } from 'react-helmet'
 
 const HomeLayout = () => {
   return (
     <>
+    <Helmet>
+      <title>Bistro Boss | Home</title>
+    </Helmet>
     <Hero/>
     <div className='max-w-7xl mx-auto'>
       <CategorySlide/>

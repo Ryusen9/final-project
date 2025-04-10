@@ -5,7 +5,6 @@ import { IoCartOutline, IoClose } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
 
 const Nav = () => {
-  const navLinks = ["Home", "Contact us", "Dashboard", "Our menu", "Our shop"];
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
@@ -24,16 +23,21 @@ const Nav = () => {
           <div className="flex gap-3 items-center justify-between">
             <div className="hidden lg:block">
               <ul className="uppercase flex items-center justify-center gap-5">
-                {navLinks.map((link, index) => {
-                  return (
-                    <li
-                      className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm"
-                      key={index}
-                    >
-                      <Link>{link}</Link>
-                    </li>
-                  );
-                })}
+                <li className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm">
+                  <Link to={"/"}>Home</Link>
+                </li>
+                <li className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm">
+                  <Link to={"/contactUs"}>Contact us</Link>
+                </li>
+                <li className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm">
+                  <Link to={"/dashboard"}>Dashboard</Link>
+                </li>
+                <li className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm">
+                  <Link to={"/ourMenu"}>Our menu</Link>
+                </li>
+                <li className="font-Inter hover:text-amber-400 duration-200 cursor-pointer font-semibold text-sm">
+                  <Link to={"/ourShop"}>Our shop</Link>
+                </li>
               </ul>
             </div>
             <div className="btn btn-outline btn-primary btn-sm relative">
@@ -73,16 +77,21 @@ const Nav = () => {
             </div>
             <div>
               <ul className="uppercase flex flex-col gap-5">
-                {navLinks.map((link, index) => {
-                  return (
-                    <li
-                      className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm"
-                      key={index}
-                    >
-                      <Link>{link}</Link>
-                    </li>
-                  );
-                })}
+                <li className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm">
+                  <Link to={"/"}>Home</Link>
+                </li>
+                <li className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm">
+                  <Link to={"/contactUs"}>Contact us</Link>
+                </li>
+                <li className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm">
+                  <Link to={"/dashboard"}>Dashboard</Link>
+                </li>
+                <li className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm">
+                  <Link to={"/ourMenu"}>Our menu</Link>
+                </li>
+                <li className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm">
+                  <Link to={"/outShop"}>Our shop</Link>
+                </li>
               </ul>
             </div>
           </div>
