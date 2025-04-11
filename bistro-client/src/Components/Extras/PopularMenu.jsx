@@ -1,16 +1,18 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useMenu from "../Hooks/useMenu";
 
 const PopularMenu = () => {
-  const [menu, setMenu] = useState([]);
-  useEffect(() => {
-    axios.get("menu.json").then((response) => {
-      const popularItems = response.data.filter(
-        (item) => item.category === "popular"
-      );
-      setMenu(popularItems);
-    });
-  }, []);
+  const [menu] = useMenu();
+  const popular = menu.filter((item) => item.category === "popular");
+  // const [menu, setMenu] = useState([]);
+  // useEffect(() => {
+  //   axios.get("menu.json").then((response) => {
+  //     const popularItems = response.data.filter(
+  //       (item) => item.category === "popular"
+  //     );
+  //     setMenu(popularItems);
+  //   });
+  // }, []);
   console.log(menu);
   return (
     <div className="flex flex-col mb-6 p-3 items-center justify-center">
@@ -23,7 +25,7 @@ const PopularMenu = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        {menu.map((item) => {
+        {popular.map((item) => {
           const { image, _id, name, price, recipe } = item;
           return (
             <div
@@ -54,7 +56,9 @@ const PopularMenu = () => {
         })}
       </div>
       <div className="mt-5">
-        <button className="uppercase border-b-2 py-3 px-6 hover:rounded-xl rounded-b-xl hover:rounded-b-xl hover:border-0 hover:bg-base-300 cursor-pointer">view full menu</button>
+        <button className="uppercase border-b-2 py-3 px-6 hover:rounded-xl rounded-b-xl hover:rounded-b-xl hover:border-0 hover:bg-base-300 cursor-pointer">
+          view full menu
+        </button>
       </div>
     </div>
   );
