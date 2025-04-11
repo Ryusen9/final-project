@@ -90,7 +90,7 @@ const Nav = () => {
                   <Link to={"/ourMenu"}>Our menu</Link>
                 </li>
                 <li className="font-Inter p-5 border-b-2 border-t-2 hover:bg-white hover:text-black duration-500 cursor-pointer font-semibold text-sm">
-                  <Link to={"/outShop"}>Our shop</Link>
+                  <Link to={"/ourShop"}>Our shop</Link>
                 </li>
               </ul>
             </div>

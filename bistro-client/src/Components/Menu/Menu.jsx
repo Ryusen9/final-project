@@ -33,7 +33,7 @@ const Menu = () => {
           </div>
         </div>
         <div className="my-4">
-          <MenuCategory menuCategory={"popular"} />
+          <MenuCategory menuCategory={"offered"} />
         </div>
         <div className="my-5 flex items-center justify-center">
           <button className="uppercase border-b-2 py-3 px-6 hover:rounded-xl rounded-b-xl hover:rounded-b-xl hover:border-0 hover:bg-base-300 cursor-pointer">
