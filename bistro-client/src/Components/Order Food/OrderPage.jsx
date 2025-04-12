@@ -67,8 +67,9 @@ const OrderPage = () => {
               {categoryItems.map((item) => (
                 <div
                   key={item._id}
-                  className="rounded-2xl overflow-hidden border-2"
+                  className="rounded-2xl overflow-hidden border-2 relative"
                 >
+                    <p className="px-3 py-1.5 absolute top-4 right-4 bg-base-300 rounded-xl">{item.price}</p>
                   <div
                     className="h-[25vh] bg-center bg-no-repeat bg-cover"
                     style={{ backgroundImage: `url(${item.image})` }}
@@ -92,39 +93,6 @@ const OrderPage = () => {
               ))}
             </TabPanel>
           ))}
-
-          {/* <TabPanel
-            className={`max-w-7xl mx-auto p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5`}
-          >
-            {salad.map((item) => {
-              return (
-                <div
-                  className="rounded-2xl overflow-hidden border-2"
-                  key={item._id}
-                >
-                  <div
-                    className="h-[25vh] bg-center bg-no-repeat bg-cover"
-                    style={{ backgroundImage: `url(${item.image})` }}
-                  ></div>
-                  <div className="flex flex-col gap-4 p-7">
-                    <div className="text-center flex flex-col gap-3">
-                      <p className="text-lg lg:text-xl font-Cinzel font-bold uppercase">
-                        {item.name}
-                      </p>
-                      <p className="text-xs lg:text-sm font-Inter">
-                        {item.recipe}
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <button className="uppercase border-b-2 py-3 px-6 hover:rounded-xl rounded-b-xl hover:rounded-b-xl hover:border-0 hover:bg-base-100 cursor-pointer hover:text-amber-500 transition-colors duration-200">
-                        ADD TO cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </TabPanel> */}
         </Tabs>
       </div>
     </div>
